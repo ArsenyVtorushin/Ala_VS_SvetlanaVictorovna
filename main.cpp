@@ -68,7 +68,7 @@ int main()
 
 		for (int i = 0; i < enemies.size(); i++)
 		{
-			enemies[i].move(-5.f, 0.f);
+			enemies[i].move(-10.f, 0.f);
 
 			if (enemies[i].getPosition().x < 0 - enemy.getGlobalBounds().width)
 			{
@@ -76,11 +76,11 @@ int main()
 			}
 		}
 
-		if (enemySpawnTimer < 40)
+		if (enemySpawnTimer < 32)
 		{
 			enemySpawnTimer++;
 		}
-		else if (enemySpawnTimer >= 40)
+		else if (enemySpawnTimer >= 32)
 		{
 			enemy.setPosition(window.getSize().x, rand() % int(window.getSize().y - enemy.getGlobalBounds().height));
 			enemies.push_back(sf::Sprite(enemy));
